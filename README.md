@@ -34,18 +34,22 @@ Es una app hecha en laravel 10, que incluye un crud con alertas dinamicas, tambi
     (para crear una copia del archivo de ejemplo .env.example y renombrarlo como .env)
     Asegúrate de proporcionar los valores correctos para :
     DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME y DB_PASSWORD.
-    
-    5.	Genera una nueva clave de aplicación:
+
+    5.  Ingresa a tu editor de codigo, en mi caso uso 'visual studio code' para asegúrate de proporcionar los valores correctos para :
+    DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME y DB_PASSWORD.
+    en el archivo .env
+      
+    6.	Genera una nueva clave de aplicación:
     Terminal: php artisan key:generate 
     (para generar una clave de cifrado única y segura en el archivo de configuración .env del   proyecto.)
     
-    6.	Ejecuta las migraciones para crear las tablas de la base de datos:
+    7.	Ejecuta las migraciones para crear las tablas de la base de datos:
     Terminal: php artisan migrate 
     
-    7.	Ejecuta el seeder para crear usuarios en la base de datos:
+    8.	Ejecuta el seeder para crear usuarios en la base de datos:
     Terminal: php artisan db:seed
     
-    8.	Inicia el servidor de desarrollo de Laravel:
+    9.	Inicia el servidor de desarrollo de Laravel:
     Terminal: php artisan serve
     La aplicación estará disponible en http://localhost:8000.
 
