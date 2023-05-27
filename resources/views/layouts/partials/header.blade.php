@@ -1,14 +1,14 @@
 <header>
-    <nav>
-        <ul>
-            <li>
-                <a href="{{route('user.index')}}"> Inicio</a>
+    <nav class="navbar navbar-dark bg-dark">
+        <ul class="list-inline">
+            <li class="h1 list-inline-item">
+                <a class="text-white nav-link" href="{{route('user.index')}}"> Inicio</a>
             </li>
-            <li>
-                <a href="">Editar Usuario</a>
+            <li class="nav-item h1 list-inline-item">
+                <a class="text-white nav-link" href="{{route('user.index')}}">Registro de Usuarios</a>
             </li>
-            <li>
-                <a href="{{route('user.create')}}">Crear Usuario</a>
+            <li class="nav-item h1 list-inline-item">
+                <a class="text-white nav-link" href="{{route('user.grafico')}}" >Grafico de Usuarios</a>
             </li>
         </ul>
     </nav>

@@ -27,7 +27,7 @@ class UsuarioFormulario extends FormRequest
         return [
             'nombre.required'=>'Ingresar el :attribute es obligatorio',
             'correo.required'=>'Ingresar el :attribute es obligatorio',
-            'contraseña.required'=>'Ingresar el :attribute es obligatorio'
+            'contraseña.required'=>'Ingresar la :attribute es obligatorio'
         ];
     }
 }

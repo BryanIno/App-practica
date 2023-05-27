@@ -5,9 +5,10 @@
     <h1 class="text-center">
         Vista usuarios
     </h1>
-    <a href="{{route('user.create')}}" class="btn btn-primary">Nuevo Usuario</a>
-    <table class="table">
-        <thead>
+    <a href="{{route('user.create')}}" class="btn btn-primary mb-3">Nuevo Usuario</a>
+    <a href="{{route('user.export')}}" class="btn btn-secondary mb-3 exportar"> Exportar Excel</a>
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
             <tr>
                 <th>
                     Id
@@ -23,8 +24,8 @@
                 </th>
             </tr>
         </thead>
-        @foreach ($usuarios as $usuario)
-            <tbody>
+        <tbody>
+            @foreach ($usuarios as $usuario)
                 <tr>
                     <th>
                         {{$usuario->id}}
@@ -37,7 +38,7 @@
                         {{$usuario->email}}
                     </td>
                     <td>
-                        <form action="{{route('user.destroy',$usuario)}}" method="POST">
+                        <form action="{{route('user.destroy',$usuario)}}" class="eliminar-usuario" method="POST">
                             @csrf
                             @method('Delete')
                             <a href="{{route('user.edit',$usuario)}}" class="btn btn-success">Editar</a>
@@ -45,8 +46,51 @@
                         </form>
                     </td>
                 </tr>
-            </tbody>
-        @endforeach
-       
+            @endforeach
+        </tbody>
     </table>
+@endsection
+
+@section('js')
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @if (session('mensaje')=='OK')
+        <script>
+            Swal.fire(
+                    '¡Borrado!',
+                    'El usuario se ha eliminado.',
+                    'success'
+                    )
+        </script>
+    @endif
+
+    <script>
+        $('.eliminar-usuario').submit(function(e){
+            e.preventDefault();
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "¡No podrás revertir esto!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, Eliminar!',
+                cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    this.submit();
+                }
+             })
+        });
+
+        $('.exportar').click(function(e){
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'La tabla usuarios se ha descargado correctamente',
+                showConfirmButton: false,
+                timer: 3000
+            })
+        });
+    </script>
 @endsection

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+route::get('user/grafico',[UserController::class,'grafico'])->name('user.grafico');
+route::get('user/export',[UserController::class,'export'])->name('user.export');
 route::resource('user',UserController::class);
