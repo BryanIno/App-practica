@@ -21,7 +21,7 @@ Es una app hecha en laravel 10, que incluye un crud con alertas dinamicas, tambi
 ## Instalación: Sigue estos pasos para instalar y configurar la aplicación:
     
     1.	Clona este repositorio en tu máquina local:
-    Terminal: https://github.com/BryanIno/App-practica.git
+    Terminal: git clone https://github.com/BryanIno/App-practica.git
     Terminal: cd App-practica 
     
     2.	Instala las dependencias de Composer:
