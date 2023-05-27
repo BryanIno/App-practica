@@ -1,9 +1,12 @@
 @extends('layouts.layouts')
 
 @section('contenido')
-<div class="container mt-5">
+
+<h1 class="text-center mt-3">Graficos de Usuarios</h1>
+
+<div class="container mb-3">
     <div class="row">
-        <div class="col">
+        <div class="col shadow">
             <div class="card">
                 <!--<div class="card-header">Usuarios creados en el Mes</div> -->
 
@@ -16,7 +19,7 @@
             </div>
 
         </div>
-        <div class="col">
+        <div class="col shadow">
             <div class="card">
                 <!--<div class="card-header">Usuarios creados en el Mes</div> -->
 

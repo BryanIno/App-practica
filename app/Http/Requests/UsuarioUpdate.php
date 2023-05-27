@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use PhpParser\Node\Expr\FuncCall;
 
-class UsuarioFormulario extends FormRequest
+class UsuarioUpdate extends FormRequest
 {
     
     public function authorize(): bool
@@ -14,10 +14,11 @@ class UsuarioFormulario extends FormRequest
     }
 
     public function rules(): array
-    {
+    {   
+        $userId = $this->route('user')->id; // Obtener el ID del usuario que actualizaremos
         return [
             'nombre' => 'required|regex:/^[\p{L}\s]+$/u|max:50|min:3', 
-            'correo' => 'required|max:60|email|unique:users,email,',
+            'correo' => 'required|max:60|email|unique:users,email,'. $userId,
             'contraseña' => 'required|min:8|max:20',
         ];
     }

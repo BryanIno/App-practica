@@ -9,11 +9,15 @@
 </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <div class="container mx-auto">
-        @include('layouts.partials.header')
+   
+    @include('layouts.partials.header')
+    
+    <div class="container mx-auto mt-5 ">
+        @include('layouts.mensajes')
         @yield('contenido')
     </div>
-   @yield('js')
+   
+@yield('js')
    @yield('grafico')
 </body>
 </html>

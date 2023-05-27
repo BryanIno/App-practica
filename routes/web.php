@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 route::get('user/grafico',[UserController::class,'grafico'])->name('user.grafico');
 route::get('user/export',[UserController::class,'export'])->name('user.export');

@@ -6,6 +6,7 @@ use App\Exports\UserExport;
 use App\Http\Requests\UsuarioFormulario;
 use App\Models\User;
 use App\Exports\UsersExport;
+use App\Http\Requests\UsuarioUpdate;
 use Maatwebsite\Excel\Facades\Excel;
 use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 
@@ -16,7 +17,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $usuarios=User::all();
+        $usuarios=User::paginate(5);
         return view('usuarios.index',compact('usuarios'));
     }
 
@@ -31,14 +32,14 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(UsuarioFormulario $request)
+    public function store(UsuarioFormulario $request)//llamamos al request usuarioformulario para validar ahí
     {
         $usuario=new User();
         $usuario->name=$request->nombre;
         $usuario->email=$request->correo;
         $usuario->password=$request->contraseña;
         $usuario->save();
-        return redirect()->route('user.index');
+        return redirect()->route('user.index')->with('crear','cliente actualizado');
     }
 
     /**
@@ -60,14 +61,13 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UsuarioFormulario $request, User $user)
+    public function update(UsuarioUpdate $request, User $user)
     {
         $user->name=$request->nombre;
         $user->email=$request->correo;
         $user->password=$request->contraseña;
         $user->save();
-        
-        return redirect()->route('user.index');
+        return redirect()->route('user.index')->with('guardar','cliente guardado');
     }
 
     /**

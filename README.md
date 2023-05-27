@@ -7,47 +7,48 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## App creado en Laravel 10
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Es una app hecha en laravel 10, que incluye un crud con alertas dinamicas, tambien se puede exportar un excel con la tabla vista, y ver graficos con los datos de la misma tabla.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Requisitos: Antes de comenzar, asegúrate de tener instalados los siguientes requisitos:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+•	PHP (versión 7.0 o superior)
+•	Composer
+•	Laravel Framework (versión 5.8 o superior)
+•	MySQL
 
-## Learning Laravel
+## Instalación: Sigue estos pasos para instalar y configurar la aplicación:
+    
+    1.	Clona este repositorio en tu máquina local:
+    Terminal: https://github.com/BryanIno/App-practica.git
+    Terminal: cd App-practica 
+    
+    2.	Instala las dependencias de Composer:
+    Terminal: composer install 
+    
+    3.	Crea una Base de datos Mysql, en mi caso utilize “phpmyadmin”, llamada app-practica. De esa manera, la deje ingresada en el .env-example. 
+    
+    4.	Crea un archivo .env basado en el archivo .env.example y configura los valores de   conexión a la base de datos:
+    Terminal: cp .env.example .env 
+    (para crear una copia del archivo de ejemplo .env.example y renombrarlo como .env)
+    Asegúrate de proporcionar los valores correctos para :
+    DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME y DB_PASSWORD.
+    
+    5.	Genera una nueva clave de aplicación:
+    Terminal: php artisan key:generate 
+    (para generar una clave de cifrado única y segura en el archivo de configuración .env del   proyecto.)
+    
+    6.	Ejecuta las migraciones para crear las tablas de la base de datos:
+    Terminal: php artisan migrate 
+    
+    7.	Ejecuta el seeder para crear usuarios en la base de datos:
+    Terminal: php artisan db:seed
+    
+    8.	Inicia el servidor de desarrollo de Laravel:
+    Terminal: php artisan serve
+    La aplicación estará disponible en http://localhost:8000.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
 ## Contributing
 

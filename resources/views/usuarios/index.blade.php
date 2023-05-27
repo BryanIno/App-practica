@@ -5,9 +5,9 @@
     <h1 class="text-center">
         Vista usuarios
     </h1>
-    <a href="{{route('user.create')}}" class="btn btn-primary mb-3">Nuevo Usuario</a>
-    <a href="{{route('user.export')}}" class="btn btn-secondary mb-3 exportar"> Exportar Excel</a>
-    <table class="table table-bordered table-hover">
+    <a href="{{route('user.create')}}" class="btn btn-primary mb-3 shadow-lg">Nuevo Usuario</a>
+    <a href="{{route('user.export')}}" class="btn btn-secondary mb-3 shadow-lg exportar"> Exportar Excel</a>
+    <table class="table table-bordered table-hover shadow-lg">
         <thead class="table-dark">
             <tr>
                 <th>
@@ -49,6 +49,10 @@
             @endforeach
         </tbody>
     </table>
+        <!-- Para paginar vista -->
+    <div class="d-flex justify-content-center">
+        {{ $usuarios->links() }}
+    </div>
 @endsection
 
 @section('js')
@@ -92,5 +96,6 @@
                 timer: 3000
             })
         });
-    </script>
+        
+    </script>  
 @endsection
