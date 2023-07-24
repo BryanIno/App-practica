@@ -1,43 +1,38 @@
 @extends('layouts.layouts')
 @section('titulo','Usuarios')
 
+@section('subtitulo', 'Registro de usuarios')
 @section('contenido')
-    <h1 class="text-center">
-        Vista usuarios
-    </h1>
-    <a href="{{route('user.create')}}" class="btn btn-primary mb-3 shadow-lg">Nuevo Usuario</a>
-    <a href="{{route('user.export')}}" class="btn btn-secondary mb-3 shadow-lg exportar"> Exportar Excel</a>
-    <table class="table table-bordered table-hover shadow-lg">
-        <thead class="table-dark">
+<div class="Inicio">
+
+    <a href="{{route('user.create')}}" class="mb-3 shadow-lg btn btn-primary">Nuevo Usuario</a>
+    <a href="{{route('user.export')}}" class="mb-3 shadow-lg btn btn-secondary exportar"> Exportar Excel</a>
+    <table class="">
+        <thead class="">
             <tr>
-                <th>
-                    Id
-                </th>
-                <th>
+                <th class="columna1">
                     Nombre
                 </th>
-                <th>
+                <th class="columna2">
                     Correo Electronico
                 </th>
-                <th>
+                <th class="columna3">
                     Opciones
                 </th>
             </tr>
         </thead>
         <tbody>
             @foreach ($usuarios as $usuario)
-                <tr>
-                    <th>
-                        {{$usuario->id}}
-                    </th>
-                    <td>
+                <tr class="filas">
+                    
+                    <td class="fila1">
                         <a href="{{route('user.show',$usuario)}}">{{$usuario->name}}</a>
                         
                     </td>
-                    <td>
+                    <td class="fila2">
                         {{$usuario->email}}
                     </td>
-                    <td>
+                    <td class="fila3">
                         <form action="{{route('user.destroy',$usuario)}}" class="eliminar-usuario" method="POST">
                             @csrf
                             @method('Delete')
@@ -98,4 +93,6 @@
         });
         
     </script>  
+</div>
+   
 @endsection

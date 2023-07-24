@@ -97,7 +97,7 @@ class UserController extends Controller
         $chart = new LaravelChart($chart_options);
         
         $chart_options = [
-            'chart_title' => 'Usuarios creados por dia',
+            'chart_title' => 'Usuarios creados por día',
             'report_type' => 'group_by_date',
             'model' => 'App\Models\User',
             'group_by_field' => 'created_at',

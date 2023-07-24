@@ -1,0 +1,255 @@
+/* ----------------------------------------------------- */
+/* --------------------NAVBAR--------------------------- */
+.navbarr{
+    background-color: rgb(12, 4, 23);
+    width: 100%;
+    height: 65px;
+    border-bottom: solid 1px rgb(86, 83, 83);
+
+}
+
+.navbar-ul{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin-left: 9.5%;
+    margin-right: 9.5%;
+    font-size: 14px;
+    font-family: 'Figtree',sans-serif;
+    
+}
+.navbar-ul li{
+    font-size: 1.3em;
+    display: inline-flex;
+    margin-right: 30px;
+    height: 65px;
+    list-style: none;
+    align-items: center; 
+    justify-items: center;
+}
+
+.navbar-ul li:hover{
+    text-decoration: none;
+    border-bottom: solid 3px rgb(158, 130, 110); 
+}
+
+.navbar-ul a:hover,a{
+    color: aliceblue;
+    text-decoration:none;
+}
+.active-lista {
+    border-bottom: solid 3px rgb(255, 106, 0); 
+  }
+
+.titulo-header{
+    width: 100%;
+    height: 73px;
+    background-color: rgb(12, 4, 23);
+    border-bottom: solid 1px rgb(86, 83, 83);
+    box-shadow: 0px 1px 2px 2px rgb(104, 101, 108);
+    display: flex;
+    align-items: center;
+}
+
+.titulo-header h2{
+    font-weight: bold;
+    color: aliceblue;
+    font-size: 20px;
+    letter-spacing: normal;
+    font-family: 'Figtree',sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    height: 20px;
+}
+.navbar-ul img{
+    margin-right: 50px; 
+}
+.logo-menu{
+    position: absolute;
+    width: 40px;
+    top: 1rem;
+    right: 1rem;
+    filter:  invert(1);
+}
+.logo-menu img{
+    max-width: 100%;
+}
+
+/* ----------------------------------------------------- */
+/* -----------------------CONTENIDO ---------------------*/
+h1{
+    font-size: 26px;
+}
+p{
+    font-family: 'Figtree',sans-serif;
+    font-size: 16px;
+    color: rgb(107, 114, 128);
+}
+
+body{
+    background-color:rgb(243,244,246);
+    
+}
+.main{
+    width: 100%;
+    height: 100%;
+    
+}
+.contenido{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgb(172, 168, 176);
+}
+
+.Inicio{
+    padding: 32px;
+}
+.registro div{
+    margin-bottom: 20px;
+}
+/* ----------------------------------------------------- */
+/* ----------------------TABLA-------------------------- */
+table{
+    
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 1px 1px rgb(104, 101, 108);
+    border-radius: 10px;
+}
+th, td{
+    padding: 5px;
+    padding-left:20px;
+    border:solid 1px rgb(70, 70, 70);
+}
+.columna1,.columna2{
+    width: 40%;
+}
+.columna3{
+    width: 16%;
+}
+
+thead{
+    background-color: rgb(0, 0, 0); 
+    color: aliceblue;
+}
+
+td a{
+    color: black;
+}
+
+tr{
+   
+   border: solid 1px rgb(70, 70, 70);
+   font-size: 15px;
+}
+
+.filas:hover{
+    background-color: rgb(227, 227, 227);
+}
+/* ----------------------------------------------------- */
+/* ----------------------GRAFICO------------------------ */
+
+
+
+.contenedor-graficos{
+    width: 100%;
+    display: flex;
+    padding: 24px;
+}
+.tarjeta-grafico{
+    
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+} 
+.grafico h3, .grafico2 h3{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    letter-spacing: normal;
+    font-family: 'Figtree',sans-serif;
+    text-align: center;
+}
+
+/* ----------------------------------------------------- */
+/* --------------------RESPONSIVO----------------------- */
+
+/* PANTALLA GRANDE */
+@media screen and (min-width: 750px){
+    .logo-menu{
+        display: none;
+    }
+    .logo-menu img{
+        max-width: 100%;
+    }
+}
+
+
+/* PANTALLA PEQUEÑA */
+@media screen and (max-width: 750px) {
+    .navbar-ul{
+        display: none;
+    }
+    .navbarr{
+        background-color: rgb(12, 4, 23);
+        width: 100%;
+        height: auto;
+        border-bottom: solid 1px rgb(86, 83, 83);
+    
+    }
+
+    .contenedor-graficos{
+        width: 100%;
+        display: block;
+        padding: 24px;
+    } 
+    .grafico2{
+        margin-top: 50px;
+    }
+    .contenido{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background-color:rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgb(172, 168, 176);
+    }
+    th, td{
+        padding: 5px;
+        padding-left: 10px;
+        border:solid 1px rgb(70, 70, 70);
+        font-size: 15px;
+    }
+  
+    .columna2,.fila2{
+        display: none;
+       
+    }
+    .columna1,.columna3{
+        width: 50%;
+    }
+    .active-link{
+        border-bottom: solid 3px rgb(255, 106, 0); 
+    }
+    .active-lista {
+        border-bottom: solid 0px rgb(255, 106, 0); 
+    }
+}
+.clicMenu{
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(12, 4, 23); 
+}
+.clicMenu img{
+    padding-top: 20px;
+}

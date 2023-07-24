@@ -1,42 +1,30 @@
 @extends('layouts.layouts')
 
+@section('subtitulo', 'Usuarios Creados ')
+
 @section('contenido')
-
-<h1 class="text-center mt-3">Graficos de Usuarios</h1>
-
-<div class="container mb-3">
-    <div class="row">
-        <div class="col shadow">
-            <div class="card">
+    <div class="contenedor-graficos">
+        <div class="tarjeta-grafico">
+            <div class="grafico">
                 <!--<div class="card-header">Usuarios creados en el Mes</div> -->
-
-                <div class="card-body">
-
-                    <h1>{{ $chart->options['chart_title'] }}</h1>
+                <div class="">
+                    <h3>{{ $chart->options['chart_title'] }}</h3>
                     {!! $chart->renderHtml() !!}
-                    
                 </div>
             </div>
-
         </div>
-        <div class="col shadow">
-            <div class="card">
+        <div class="tarjeta-grafico">
+            <div class="grafico2">
                 <!--<div class="card-header">Usuarios creados en el Mes</div> -->
-
-                <div class="card-body">
-
-                    <h1>{{ $chart2->options['chart_title'] }}</h1>
+                <div class="">
+                    <h3>{{ $chart2->options['chart_title'] }}</h3>
                     {!! $chart2->renderHtml() !!}
-
                 </div>
-
             </div>
         </div>
     </div>
-</div>
-
     
-</div>
+    
 @endsection
 
 @section('grafico')
